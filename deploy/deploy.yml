@@ -1,5 +1,5 @@
 ---
-- hosts: prod
+- hosts: app1
   vars:
     project_path: /var/www/nodejs
   tasks:
@@ -21,7 +21,7 @@
         state=directory
     - name: Clone the repository
       git:
-        repo: git@github.com:USERNAME/REPO.git
+        repo: git@github.com:ssp1950/nodejs-deploy.git
         dest: "{{ release_path }}"
     - name: Update npm
       npm:
