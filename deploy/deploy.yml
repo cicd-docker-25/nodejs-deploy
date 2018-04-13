@@ -23,6 +23,7 @@
       git:
         repo: git@github.com:ssp1950/nodejs-deploy.git
         dest: "{{ release_path }}"
+        accept_hostkey: "yes"
     - name: Update npm
       npm:
         path={{ release_path }}
